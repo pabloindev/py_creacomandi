@@ -218,16 +218,40 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
-           <widget class="QLabel" name="label_7">
+           <widget class="QLabel" name="label_8">
             <property name="text">
-             <string>Quality</string>
+             <string>Quality Audio</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QSpinBox" name="spinBoxFFmpegBitrate">
+           <widget class="QSpinBox" name="spinBoxFFmpegBitrateAudio">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>320</number>
+            </property>
+            <property name="value">
+             <number>128</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Quality Video</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxFFmpegBitrateVideo">
             <property name="minimum">
              <number>1</number>
             </property>

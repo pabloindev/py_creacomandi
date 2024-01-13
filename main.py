@@ -326,7 +326,8 @@ class MainWindow(QtWidgets.QMainWindow):
         abs_path_ffmpeg_exe = self.costruisci_percorso_eseguibile_ffmpeg()
         list_comandi = []
         comando_template = self.comboBoxFFmpegCommands.currentText()
-        opzioni = " -b:v " + str(self.spinBoxFFmpegBitrate.value()) + "k "
+        birrateVideo = " -b:v " + str(self.spinBoxFFmpegBitrateVideo.value()) + "k "
+        birrateAudio = " -b:a " + str(self.spinBoxFFmpegBitrateAudio.value()) + "k "
 
 
         # recupero la lista dei file dalla textarea
@@ -341,7 +342,7 @@ class MainWindow(QtWidgets.QMainWindow):
             # mi costruisco il comando da lanciare
             #list_temp = list_args + ["\"" + path + "\"", "-o" , "\"" + filename + ".webp\""]
             #comando = "\"" + abs_path_libwebp_exe + "\" " + ' '.join(list_temp)
-            comando = comando_template.replace("<programma>", "\"" + abs_path_ffmpeg_exe + "\"").replace("<opzioni>", opzioni).replace("<input>", "\"" + path + "\"").replace("<output>", "\"" + filename + "_NEW.mp4\"")
+            comando = comando_template.replace("<programma>", "\"" + abs_path_ffmpeg_exe + "\"").replace("<bitrateVideo>", birrateVideo).replace("<bitrateAudio>", birrateAudio).replace("<input>", "\"" + path + "\"").replace("<output>", "\"" + filename + "_NEW.mp4\"")
             list_comandi.append(comando)
         
         return list_comandi

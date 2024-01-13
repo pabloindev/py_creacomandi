@@ -1,6 +1,6 @@
 {
     "machine_comment": "rappresenta la macchina su cui sto operando 'win_msi2023', 'win_pcsoggiorno' 'macm1', 'vbox_Linuxmx', 'vbox_fedora39', 'vbox_rocky', 'vbox_ubuntu'",
-    "machine": "win_pcsoggiorno",
+    "machine": "win_msi2023",
     "type_machine_comment": "mi dice il tipo di macchina, se win, mac, debian, redhat",
     "type_machine": "win",
     "win_msi2023": {
@@ -17,7 +17,7 @@
             "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
             "path_eseguibile": "C:/Users/pabloindev/Desktop/varie/portable/ffmpeg-6.1.1-full_build/bin/ffmpeg.exe",
             "commands" :[
-                "<programma> -y -i <input> -c:v libx264 <opzioni> -preset slower -pass 1 -an -f null NUL && <programma> -i <input> -c:v libx264 <opzioni> -preset slower -pass 2 -c:a aac -b:a 128k <output>"
+                "<programma> -y -i <input> -c:v libx264 <bitrateVideo> -preset slower -pass 1 -an -f null NUL && <programma> -i  <input> -c:v libx264 <bitrateVideo> -preset slower -pass 2 -c:a aac <bitrateAudio> <output>"
             ],
             "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
             "SN_EseguiProcessi": "N",
@@ -39,7 +39,7 @@
             "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
             "path_eseguibile": "C:/Users/pablodev/Desktop/varie/portable/ffmpeg-5.1-essentials_build/bin/ffmpeg.exe",
             "commands" :[
-                "<programma> -y -i <input> -c:v libx264 <opzioni> -preset slower -pass 1 -an -f null NUL && <programma> -i <input> -c:v libx264 <opzioni> -preset slower -pass 2 -c:a aac -b:a 128k <output>"
+                "<programma> -y -i <input> -c:v libx264 <bitrateVideo> -preset slower -pass 1 -an -f null NUL && <programma> -i  <input> -c:v libx264 <bitrateVideo> -preset slower -pass 2 -c:a aac <bitrateAudio> <output>"
             ],
             "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
             "SN_EseguiProcessi": "N",

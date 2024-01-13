@@ -1,6 +1,6 @@
 {
     "machine_comment": "rappresenta la macchina su cui sto operando 'win_msi2023', 'win_pcsoggiorno' 'macm1', 'vbox_Linuxmx', 'vbox_fedora39', 'vbox_rocky', 'vbox_ubuntu'",
-    "machine": "win_msi2023",
+    "machine": "win_pcsoggiorno",
     "type_machine_comment": "mi dice il tipo di macchina, se win, mac, debian, redhat",
     "type_machine": "win",
     "win_msi2023": {
@@ -16,6 +16,28 @@
         "ffmpeg": {
             "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
             "path_eseguibile": "C:/Users/pabloindev/Desktop/varie/portable/ffmpeg-6.1.1-full_build/bin/ffmpeg.exe",
+            "commands" :[
+                "<programma> -y -i <input> -c:v libx264 <opzioni> -preset slower -pass 1 -an -f null NUL && <programma> -i <input> -c:v libx264 <opzioni> -preset slower -pass 2 -c:a aac -b:a 128k <output>"
+            ],
+            "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
+            "SN_EseguiProcessi": "N",
+            "QFileDialog_filtroFiles_comment" : "filtro per l'oggetto QFileDialog",
+            "QFileDialog_filtroFiles" : "Video (*.mp4 *.ts *.mkv)"
+        }
+    },
+	"win_pcsoggiorno": {
+        "cwebp": {
+            "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
+            "path_eseguibile": "libwebp-1.3.2-windows-x64/bin/cwebp.exe",
+            "commands" :["<programma> -m 6 -mt -af -progress <opzioni> <input> -o <output>", "<programma> -m 6 -mt -af <opzioni> <input> -o <output>"],
+            "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
+            "SN_EseguiProcessi": "S",
+            "QFileDialog_filtroFiles_comment" : "filtro per l'oggetto QFileDialog",
+            "QFileDialog_filtroFiles" : "Images (*.png *.jpg)"
+        },
+        "ffmpeg": {
+            "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
+            "path_eseguibile": "C:/Users/pablodev/Desktop/varie/portable/ffmpeg-5.1-essentials_build/bin/ffmpeg.exe",
             "commands" :[
                 "<programma> -y -i <input> -c:v libx264 <opzioni> -preset slower -pass 1 -an -f null NUL && <programma> -i <input> -c:v libx264 <opzioni> -preset slower -pass 2 -c:a aac -b:a 128k <output>"
             ],

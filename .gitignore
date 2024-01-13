@@ -1,0 +1,45 @@
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+#wordpress
+temp/
+
+#credenziali
+client_secrets.json
+credentials.json
+settings.yaml
+config.json
+
+# file esterni scaricati
+vendor/
+
+# Node artifact files
+__pycache__/
+
+# venv folder
+venv/
+env/
+py_bin_env/
+
+# logs folder
+logs/
+
+#pyinstaller
+build/
+dist/
+
+# alcuni file specifici
+appsetting.json
+opzioni_persistence.pkl
+
+
+# Compiled Python bytecode
+*.py[cod]
+
+# Log files
+*.log
+
+# MAC
+.DS_Store

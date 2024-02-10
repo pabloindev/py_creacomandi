@@ -18,6 +18,7 @@ from PyQt6.QtCore import QThread, QProcess, pyqtSignal #threads
 # python standard lib
 import sys, os, json, time, logging
 from logging.handlers import RotatingFileHandler
+from datetime import datetime
 
 # mie classi
 import Utility
@@ -205,7 +206,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 list_errori.append("file " + path + " inesistente")
             else:
                 filename, file_extension = os.path.splitext(path)
-                if file_extension.lower() not in [".jpg", ".jpeg", ".png", ".gif"]:
+                if file_extension.lower() not in [".jpg", ".jpeg", ".png", ".gif", ".webp"]:
                     list_errori.append("estensione del file " + path + " non corretta - inserire solo formati immagini")
 
 
@@ -217,6 +218,8 @@ class MainWindow(QtWidgets.QMainWindow):
         abs_path_libwebp_exe = self.costruisci_percorso_eseguibile_cwebp()
         list_comandi = []
         comando_template = self.comboBoxCwebpCommands.currentText()
+        now = datetime.now()
+        now_str = now.strftime("%Y-%m-%d_%H-%M-%S")
 
         #list_args = ["-m 6"         # Specify the compression method to use, Possible values range from 0 to 6, 
         #            , "-q " + str(self.spinBoxQualityCwebp.value()) # Specify the compression factor for RGB channels between 0 and 100. The default is 75.
@@ -244,6 +247,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
             # estraggo la path esclusa l'estenzione, e l'estensione
             filename, file_extension = os.path.splitext(path)
+
+            # aggiungo la data e ora al file name di output
+            if self.config[self.machine]["cwebp"]["SN_add_times_to_file_name"] == "S":
+                filename = filename + "_" + now_str
 
             # mi costruisco il comando da lanciare
             #list_temp = list_args + ["\"" + path + "\"", "-o" , "\"" + filename + ".webp\""]

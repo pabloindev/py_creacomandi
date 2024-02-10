@@ -11,7 +11,8 @@
             "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
             "SN_EseguiProcessi": "S",
             "QFileDialog_filtroFiles_comment" : "filtro per l'oggetto QFileDialog",
-            "QFileDialog_filtroFiles" : "Images (*.png *.jpg)"
+            "QFileDialog_filtroFiles" : "Images (*.png *.jpg *.webp)",
+            "SN_add_times_to_file_name" : "S"
         },
         "ffmpeg": {
             "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
@@ -33,7 +34,8 @@
             "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
             "SN_EseguiProcessi": "S",
             "QFileDialog_filtroFiles_comment" : "filtro per l'oggetto QFileDialog",
-            "QFileDialog_filtroFiles" : "Images (*.png *.jpg)"
+            "QFileDialog_filtroFiles" : "Images (*.png *.jpg)",
+            "SN_add_times_to_file_name" : "S"
         },
         "ffmpeg": {
             "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
@@ -55,7 +57,8 @@
             "SN_EseguiProcessi_comment": "Mi dice se posso eseguire il processo, oppure stampare a video i comandi che dovrei eseguire, questo perchè su mac senbra non funzionare qprocess",
             "SN_EseguiProcessi": "N",
             "QFileDialog_filtroFiles_comment" : "filtro per l'oggetto QFileDialog",
-            "QFileDialog_filtroFiles" : "Images (*.png *.jpg)"
+            "QFileDialog_filtroFiles" : "Images (*.png *.jpg)",
+            "SN_add_times_to_file_name" : "S"
         },
         "ffmpeg": {
             "path_eseguibile_comment": "posso specificare il nome della cartella dentro vendor/nomemacchina oppure posso specificare un percorso assoluto",
